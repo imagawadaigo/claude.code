@@ -1,5 +1,7 @@
 # 今川 大悟 — Claude Code 作業指針
 
+@businesses/philosophy.md
+
 ## このリポジトリの目的
 
 事業開発と大学卒業（九州大学法学部）を両輪で進めるための作業ベース。
