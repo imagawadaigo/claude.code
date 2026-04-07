@@ -2,6 +2,7 @@
 
 @businesses/philosophy.md
 @docs/mothers-day-service.md
+@docs/morning-routine.md
 @decisions/log.md
 
 ---
@@ -15,7 +16,8 @@ claude.code/
 │   ├── philosophy.md            ← 思想・判断軸・原体験
 │   └── （strategy.md）          ← 事業戦略（今後追加）
 ├── docs/
-│   └── mothers-day-service.md   ← 母の日サービス仕様書
+│   ├── mothers-day-service.md   ← 母の日サービス仕様書
+│   └── morning-routine.md       ← 朝ルーティン仕様（ニュース・タスク管理）
 └── decisions/
     └── log.md                   ← 判断ログ（全セッションの決定を蓄積）
 ```
@@ -90,10 +92,29 @@ claude.code/
 
 ---
 
+## 朝ルーティン（毎日）
+
+> 詳細仕様は `docs/morning-routine.md` を参照。
+
+**トリガー：** ユーザーが「おはよう」と言ったとき、以下の順で実行する。
+
+1. **ニュース3本を提示**（WebSearchで当日取得）
+   - ① ビジネス・経済　② 日本社会・政策　③ テクノロジー・AI
+   - エンタメ・プロ野球は不要
+2. **ニュースについてチャット** → 気づきをNotionの「朝ルーティンログ」DBに保存
+3. **今日のGoogleカレンダー予定を確認・表示**
+4. **タスク在庫（Notion）から今日やることを決定** → カレンダーに時間ブロック登録
+
+※ STEP 2〜4 の Notion・Google Calendar 連携は**ローカルClaude Code起動時のみ**有効。
+
+---
+
 ## 現在進行中のタスク
 
 - [x] Claude Code環境のセットアップ・最適化
 - [x] プロダクト方向性の決定（母の日メッセージ花診断サービス）
 - [x] リポジトリ構造の整理・運用ルール策定
+- [x] 朝ルーティンの設計
+- [ ] Notionに「朝ルーティンログ」「タスク在庫」DBを作成
 - [ ] 20種の花の設計（花言葉タグマッピング）
 - [ ] MVP開発開始
