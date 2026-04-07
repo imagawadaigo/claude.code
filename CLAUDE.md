@@ -1,6 +1,7 @@
 # 今川 大悟 — Claude Code 作業指針
 
 @businesses/philosophy.md
+@businesses/cognitive-profile.md
 @docs/mothers-day-service.md
 @decisions/log.md
 
@@ -13,6 +14,7 @@ claude.code/
 ├── CLAUDE.md                    ← このファイル。毎セッションの入口
 ├── businesses/
 │   ├── philosophy.md            ← 思想・判断軸・原体験
+│   ├── cognitive-profile.md     ← 思考・行動パターン（CliftonStrengths蒸留）
 │   └── （strategy.md）          ← 事業戦略（今後追加）
 ├── docs/
 │   └── mothers-day-service.md   ← 母の日サービス仕様書
